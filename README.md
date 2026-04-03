@@ -5,10 +5,29 @@
 
 ---
 
+## Developer levels
+
+Use these tiers to pick what to study first and what interviewers usually expect. Experience ranges are indicative (project complexity matters more than years).
+
+| Level | Typical experience | What you are expected to do | Question & answer practice |
+|-------|-------------------|-----------------------------|------------------------------|
+| **Junior / Beginner** | 0–1 year Odoo | Module layout, manifest, basic models and fields, domains, form/list views, view inheritance, ORM `create` / `write` / `search`, debugging with logs and developer mode | [docs/levels/Beginner_Level.md](docs/levels/Beginner_Level.md) |
+| **Intermediate** | 1–3 years | Stored computes, `constrains` vs `onchange`, security (ACL + record rules), `sudo` / context / multi-company basics, controllers, inheritance patterns, tests, performance awareness (N+1, batching) | [docs/levels/Intermediate_Level.md](docs/levels/Intermediate_Level.md) |
+| **Senior** | 3+ years | ORM cache / flush / raw SQL safety, indexing and profiling, concurrency and jobs, scaling workers and deployment concerns, upgrade-safe overrides, OWL at a high level | [docs/levels/Senior_Level.md](docs/levels/Senior_Level.md) |
+| **System / architecture** | Often overlaps Senior | Splitting modules, integrations, data modeling trade-offs, batch imports, observability | [docs/levels/System_Design.md](docs/levels/System_Design.md) + [docs/odoo_system_design.md](docs/odoo_system_design.md) |
+| **Business / functional depth** | Any level with domain focus | End-to-end flows (Sales, Purchase, Stock, Accounting, HR), scoping and trade-offs | [docs/levels/Business_Cases.md](docs/levels/Business_Cases.md) + [docs/odoo_business_cases.md](docs/odoo_business_cases.md) |
+
+**Sample module in this repo:** [custom_addons/purchase_approval/](custom_addons/purchase_approval/) — practice questions in [docs/levels/purchase_approval_lab.md](docs/levels/purchase_approval_lab.md).
+
+**Index of all level files:** [docs/levels/README.md](docs/levels/README.md).
+
+---
+
 ## 📋 Table of Contents
 
 | Part | Document | Topics |
 |------|----------|--------|
+| 0 | [Developer levels](#developer-levels) | Junior → Senior, system design, business cases |
 | 1 | **This file** | Interview Question Roadmap (Beginner → Senior) |
 | 2 | [Code Examples](file:///home/administrator/.gemini/antigravity/brain/90687616-e3a0-46f8-8eb3-10f471ccbcf1/odoo_code_examples.md) | Practical code aligned with Odoo v17–v19 |
 | 3 | [Business Case Studies](file:///home/administrator/.gemini/antigravity/brain/90687616-e3a0-46f8-8eb3-10f471ccbcf1/odoo_business_cases.md) | Sales, Purchase, Inventory, Accounting, HR |
