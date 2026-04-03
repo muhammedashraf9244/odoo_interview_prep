@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_inherit_approval" model="ir.ui.view">
+        <field name="name">purchase.order.form.approval</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_approve" string="Approve"
+                        type="object" class="btn-primary"
+                        invisible="approval_state != 'pending' or not requires_approval"
+                        groups="purchase_approval.group_purchase_approver"/>
+                <field name="approval_state" widget="statusbar"
+                       statusbar_visible="pending,approved"
+                       invisible="not requires_approval"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="requires_approval" invisible="1"/>
+                <field name="approved_by" invisible="approval_state != 'approved'"/>
+                <field name="approval_date" invisible="approval_state != 'approved'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
